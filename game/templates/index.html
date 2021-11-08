@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sea Battle</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+	</head>
+	<body>
+		<div class="app">
+			<div class="app-header">
+				<h1 class="app-title">Морской бой</h1>												
+			</div>
+			<div class="app-body">
+				<div class="player"></div>
+				<div class="app-menu">
+					<div id="action-bar-start" class="app-actions">
+						<button id="play" class="app-action">Играть</button>						
+					</div>
+					<div id="action-bar-game" class="app-actions hidden">
+						<div class="battlefield-status">...</div>
+						<button id="gaveup" class="app-action">Сдаться</button>
+						<button id="again" class="app-action">Играть еще раз</button>
+					</div>
+				</div>
+				<div class="opponent"></div>
+			</div>
+			<div class="chat hidden">
+				<input class="chat-input" />
+				<div class="chat-messages"></div>
+			</div>
+		</div>
+
+		<script src="{% static 'js/Battlefield.js' %}"></script>
+		<script src="{% static 'js/Ship.js' %}"></script>
+		<script src="{% static 'js/Shot.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+	</body>
+</html>
