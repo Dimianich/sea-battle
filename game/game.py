@@ -25,8 +25,8 @@ def add_player(name):
 
 
 def remove_player(name):
-    if player in waiting_players:        
-            waiting_players.remove(player)
+    if name in waiting_players:        
+            waiting_players.remove(name)
 
 
 def init_party(name):
