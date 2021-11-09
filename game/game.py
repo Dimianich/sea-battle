@@ -25,8 +25,7 @@ def add_player(name):
 
 
 def remove_player(name):
-    for player in waiting_players:
-        if player == name:
+    if player in waiting_players:        
             waiting_players.remove(player)
 
 
